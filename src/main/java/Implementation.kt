@@ -1,4 +1,4 @@
-class Implementation(delegate: Interface<Int>) : Interface<Int> by delegate {
+class Implementation(delegate: Interface) : Interface by delegate {
 
   override fun doThing(arg: Int) {
     TODO()

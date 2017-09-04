@@ -1,5 +1,5 @@
 import org.jetbrains.annotations.NotNull;
 
-public interface Interface<T> {
-  void doThing(@NotNull T arg);
+public interface Interface {
+  void doThing(@NotNull Integer arg);
 }

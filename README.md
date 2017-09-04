@@ -1,19 +1,20 @@
 # kotlin-interface-delegation-bug
 
-Demo of a Kotlin compiler bug that prevents a Kotlin interface from implementing a Java interface by delegation.
+Demo of a Kotlin compiler bug that prevents a Kotlin interface from implementing a Java interface by delegation,
+when a method on the interface accepts a boxed primitive type.
 
 If you have a Java interface that looks like this:
 
 ```
-public interface Interface<T> {
-  void doThing(@NotNull T arg);
+public interface Interface {
+  void doThing(@NotNull Integer arg);
 }
 ```
 
 And a Kotlin class that tries implementing it using delegation, like this:
 
 ```
-class Implementation(delegate: Interface<Int>) : Interface<Int> by delegate {
+class Implementation(delegate: Interface) : Interface by delegate {
 
   override fun doThing(arg: Int) {
     TODO()
