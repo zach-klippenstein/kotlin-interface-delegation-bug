@@ -1,5 +1,7 @@
 # kotlin-interface-delegation-bug
 
+Filed as [KT-20100](https://youtrack.jetbrains.com/issue/KT-20100).
+
 Demo of a Kotlin compiler bug that prevents a Kotlin interface from implementing a Java interface by delegation,
 when a method on the interface accepts a boxed primitive type.
 
